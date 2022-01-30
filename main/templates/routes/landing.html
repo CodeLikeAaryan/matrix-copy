@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    {% include 'components/header.html' %}
+
+    <section class="max-w-screen-xl p-4 mx-auto">
+        <div class="py-24 mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl font-extrabold text-transparent
+                        sm:text-6xl bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                    Organize your college files at one place.
+                </h1>
+
+                <div class="max-w-xl mx-auto text-lg mt-6">
+                    <p>Store your notes, certificates and important documents.</p>
+                    <p>Access files anytime, anywhere from your desktop and mobile devices.</p>
+                    <p>Get access to our collection of question papers and study material.</p>
+                </div>
+
+                <div class="mt-8 sm:items-center sm:justify-center sm:flex">
+                    <a href="{% url 'signup' %}"
+                       class="block px-5 py-3 font-medium text-white bg-blue-600 rounded-lg
+                        shadow-lg hover:bg-blue-700">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

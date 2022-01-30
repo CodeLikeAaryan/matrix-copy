@@ -1,0 +1,17 @@
+<header class="shadow-sm">
+    <div class="max-w-screen-xl p-4 mx-auto">
+        <div class="flex items-center justify-between">
+            <div class="flex font-medium text-2xl text-blue-600 font-serif tracking-widest">
+                <a href="{% url 'landing' %}">MATRIX</a>
+            </div>
+
+            <div class="items-center justify-end flex-1 space-x-4 flex">
+                <a class="px-5 py-2 text-sm font-medium text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200"
+                   href="{% url 'login' %}"> Log in </a>
+
+                <a class="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+                   href="{% url 'signup' %}"> Sign up </a>
+            </div>
+        </div>
+    </div>
+</header>

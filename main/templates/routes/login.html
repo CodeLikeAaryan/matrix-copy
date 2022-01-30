@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    {% include 'components/header.html' %}
+
+    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-lg mx-auto">
+            <h1 class="text-2xl font-bold text-center text-blue-600 sm:text-3xl font-serif">Welcome Back</h1>
+
+            <form action="" method="POST" class="p-8 mt-6 mb-0 space-y-4 rounded-md"
+                  style="box-shadow: rgba(0, 0, 0, 0.25) 0 1px 4px">
+                {% csrf_token %}
+                <p class="text-lg font-medium">Sign in to your account</p>
+
+                <div>
+                    <label for="username" class="text-sm font-medium">Username</label>
+
+                    <div class="relative mt-1">
+                        <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                class="w-full p-4 pr-12 text-sm rounded-lg"
+                                style="box-shadow: rgba(0, 0, 0, 0.12) 0 1px 4px"
+                                placeholder="johndoe"
+                                autocomplete="off"
+                                required
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password" class="text-sm font-medium">Password</label>
+                    <div class="relative mt-1">
+                        <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="w-full p-4 pr-12 text-sm rounded-lg"
+                                style="box-shadow: rgba(0, 0, 0, 0.12) 0 1px 4px"
+                                placeholder="Password"
+                                required
+                        />
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="block w-full px-5 py-3 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+                    Login
+                </button>
+
+
+                {% for message in messages %}
+                    <p style="color: red">{{ message }}</p>
+                {% endfor %}
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% comment %}<p class="text-sm text-center text-gray-500">
+    Already have an account?
+    <a class="underline" href="">Login</a>
+</p>{% endcomment %}

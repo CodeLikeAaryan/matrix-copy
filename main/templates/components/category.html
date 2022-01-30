@@ -1,0 +1,43 @@
+{% extends 'dashboard_template.html' %}
+{% block body %}
+
+    <div class="mx-8 text-xl mb-20">
+        <div class="mt-6 space-y-4">
+            <h1 class="text-2xl font-bold sm:text-3xl font-mono">{{ category }}</h1>
+            <div class="flex flex-wrap">
+                {% for i in data %}
+                    <div class="border border-gray-100 rounded-lg shadow-sm mr-2 my-2 max-w-xs">
+                        <img
+                                class="object-cover w-full h-56 rounded-t-lg"
+                                src="https://source.unsplash.com/random/?{{ category }}"
+                                alt=""
+                        />
+
+                        <div class="p-3">
+                            <h5 class="text-sm font-sm">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </h5>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'components/create_button.html' %}
+{% endblock %}
+
+{% comment %}
+<div class="px-3 py-2">
+<button class="py-1 px-3 rounded-full text-sm
+text-white bg-blue-600 hover:bg-blue-700">
+Delete
+</button>
+<button class="py-1 px-3 rounded-full text-sm
+text-white bg-blue-600 hover:bg-blue-700">
+Download
+</button>
+</div>
+{% endcomment %}
+
+{#https://w7.pngwing.com/pngs/49/1018/png-transparent-pdf-computer-icons-others-miscellaneous-text-rectangle.png#}
